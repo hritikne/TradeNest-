@@ -1,0 +1,135 @@
+/* ===== Hero Section ===== */
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.hero-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.hero-title span {
+  color: #007bff;
+}
+
+.hero-subtitle {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.hero-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hero-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.hero-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-card h5 i {
+  color: #007bff;
+}
+
+.hero-card p {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* ===== Core Section ===== */
+.core-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.core-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.core-title span {
+  color: #007bff;
+}
+
+.core-subtitle {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-member {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+}
+
+.team-member img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+.team-member h5 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.team-role {
+  color: #6c757d;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.team-desc {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.team-links a {
+  text-decoration: none;
+  color: #6c757d;
+  margin: 0 5px;
+  font-size: 1.2rem;
+}
+
+.team-links a:hover {
+  color: #007bff;
+}

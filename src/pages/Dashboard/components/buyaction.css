@@ -1,0 +1,174 @@
+/* ================================
+   Zerodha-style Buy Window Design
+   ================================ */
+
+.buy-window-container {
+  width: 350px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease;
+}
+
+.buy-window-container:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Regular order inputs container */
+.regular-order {
+  margin-bottom: 20px;
+}
+
+/* Inputs Section */
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.inputs fieldset {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  transition: border 0.3s ease;
+}
+
+.inputs fieldset:focus-within {
+  border-color: #387ed1; /* Zerodha blue */
+  box-shadow: 0 0 5px rgba(56, 126, 209, 0.3);
+}
+
+.inputs legend {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+.inputs input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  padding: 4px;
+  background: transparent;
+}
+
+/* Buttons Section */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.margin-info {
+  font-size: 13px;
+  color: #444;
+  background: #f8f9fb;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  text-align: center;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-blue {
+  background-color: #387ed1;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #2e6db0;
+}
+
+.btn-grey {
+  background-color: #f3f3f3;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-grey:hover {
+  background-color: #e9e9e9;
+}
+/* ==============================
+   Background Blur Effect
+   ============================== */
+.blurred-background {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ==============================
+   Overlay (Dark + Blur)
+   ============================== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 998;
+}
+
+/* ==============================
+   Buy Window Animation
+   ============================== */
+.buy-window-container {
+  width: 350px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 999;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+

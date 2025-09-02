@@ -1,0 +1,128 @@
+/* Section Styles */
+.signup-section {
+  padding: 80px 20px;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* Left Side */
+.signup-left {
+  flex: 1 1 450px;
+}
+
+.signup-left h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.signup-left .highlight {
+  color: #0d6efd;
+}
+
+.signup-left p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.signup-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Side */
+.signup-right {
+  flex: 1 1 400px;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.signup-right h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.signup-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-right input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.signup-right input:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+}
+
+.signup-right button {
+  padding: 12px 20px;
+  background-color: #0d6efd;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signup-right button:hover {
+  background-color: #0b5ed7;
+}
+
+.signup-login {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.signup-login a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.signup-login a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .signup-container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .signup-left, .signup-right {
+    flex: 1 1 100%;
+  }
+
+  .signup-left img {
+    max-width: 300px;
+  }
+}
