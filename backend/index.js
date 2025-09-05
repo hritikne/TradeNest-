@@ -14,13 +14,15 @@ const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
 const app = express();
-
-//Middleware order
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",                
+    "https://tradenest-1-ay29.onrender.com" 
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
+
 app.use(cookieParser());
 app.use(bodyParser.json());
 
@@ -44,7 +46,8 @@ app.get("/allPositions", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
- app.get("/allSupport", async (req, res) => {
+
+app.get("/allSupport", async (req, res) => {
   try {
     const support = await userSupport.find({});
     res.json(support);
@@ -100,6 +103,9 @@ mongoose
     app.listen(PORT, () => {
       console.log(`Server running on http://localhost:${PORT}`);
     });
+  })
+  .catch((err) => console.error("DB Connection Error:", err));
+
   })
   .catch((err) => {
     console.error("DB connection failed:", err.message);
