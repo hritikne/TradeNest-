@@ -15,7 +15,7 @@ import NotFound from "./landing/notFound.jsx";
 import Currency from "./landing/pricing/Currency.jsx";
 import Equity from "./landing/pricing/Equity.jsx";
 import Commodity from "./landing/pricing/Commodity.jsx";
-import AdminDashboard from "./landing/Admindashboard.jsx";
+import AdminDashboard from "./landing/AdminDashboard.jsx";
 
 /** Dashboard Wrapper */
 const DashboardWrapper = lazy(() => import("./pages/Dashboard/DashboardWrapper"));
