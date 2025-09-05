@@ -9,7 +9,7 @@ import {
 } from "@mui/icons-material";
 import GeneralContext from "./GeneralContext";
 import { watchlist } from "../data/data";
-import { DoughnutChart } from "./DoughnoutChart";
+import  DoughnutChart  from "./DoughnoutChart";
 
 const WatchList = () => {
   const SIDEBAR_WIDTH = 450; // match with Home.jsx
