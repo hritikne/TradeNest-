@@ -14,10 +14,12 @@ const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
 const app = express();
+
+// ✅ Fixed CORS
 app.use(cors({
   origin: [
-    "http://localhost:5173",                
-    "https://tradenest-1-ay29.onrender.com" 
+    "http://localhost:5173",                // for local dev
+    "https://tradenest-1-ay29.onrender.com" // deployed frontend
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
@@ -106,7 +108,3 @@ mongoose
   })
   .catch((err) => console.error("DB Connection Error:", err));
 
-  })
-  .catch((err) => {
-    console.error("DB connection failed:", err.message);
-  });
