@@ -6,7 +6,7 @@ import NavBar from "./landing/NavBar";
 import Footer from "./landing/Footer";
 import SignUp from "./landing/signup/SignUp.jsx";
 import HomePage from "./landing/home/HomePage.jsx";
-import Login from "./landing/signup/login.jsx";
+import Login from "./landing/signup/Login.jsx";
 import AboutPage from "./landing/about/AboutPage.jsx";
 import ProductPage from "./landing/product/ProductPage.jsx";
 import PrisingPage from "./landing/pricing/PrisingPage.jsx";
