@@ -12,7 +12,7 @@ const Holdings = () => {
     setLoading(true);
 
     axios
-      .get("http://localhost:3002/allHoldings")
+      .get("https://tradenest-orec.onrender.com/allHoldings")
       .then((res) => {
         if (!cancelled) setAllHoldings(Array.isArray(res.data) ? res.data : []);
       })

@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
  
       try {
              alert("Are you sure want to Sell this order");
-        const res = await axios.delete(`http://localhost:3002/deleteorder/${ordersid}`);
+           await axios.delete(`https://tradenest-orec.onrender.com/deleteOrder/${ordersid}`);
       } catch (err) {
         console.error("Error deleting order:", err.message);
       }
@@ -22,7 +22,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get("http://localhost:3002/allOrders");
+        const res = await axios.get("https://tradenest-orec.onrender.com/allOrders");
         setOrders(res.data);
       } catch (err) {
         console.error("Error fetching orders:", err.message);

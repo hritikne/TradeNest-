@@ -9,7 +9,7 @@ const Positions = () => {
     let cancelled = false;
     setLoading(true);
     axios
-      .get("http://localhost:3002/allPositions")
+      .get("https://tradenest-orec.onrender.com/allPositions")
       .then((res) => {
         if (!cancelled) setPositions(Array.isArray(res.data) ? res.data : []);
       })

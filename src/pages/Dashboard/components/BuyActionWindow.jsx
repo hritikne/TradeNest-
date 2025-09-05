@@ -2,7 +2,7 @@ import  { useState, useContext } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import "./Buyaction.css"; 
+import "./buyaction.css"; 
 import GeneralContext from "./GeneralContext";
 
 
@@ -14,7 +14,7 @@ const BuyActionWindow = ({ uid }) => {
 
   const handleBuyClick = async () => {
     try {
-      await axios.post("http://localhost:3002/newOrder", {
+      await axios.post("https://tradenest-orec.onrender.com/newOrder", {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,

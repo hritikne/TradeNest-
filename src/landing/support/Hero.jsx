@@ -29,7 +29,7 @@ function Hero() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3002/Support", formData);
+      const response = await axios.post("https://tradenest-orec.onrender.com/Support", formData);
 
       console.log("Support request sent:", response.data);
       alert("Support request submitted! Our team will get back to you shortly.");

@@ -5,8 +5,8 @@ import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import NavBar from "./landing/NavBar";
 import Footer from "./landing/Footer";
 import SignUp from "./landing/signup/SignUp.jsx";
-import Login from "./landing/signup/login.jsx";
 import HomePage from "./landing/home/HomePage.jsx";
+import Login from "./landing/signup/login.jsx";
 import AboutPage from "./landing/about/AboutPage.jsx";
 import ProductPage from "./landing/product/ProductPage.jsx";
 import PrisingPage from "./landing/pricing/PrisingPage.jsx";
@@ -113,28 +113,28 @@ function App() {
         {/* Landing Pages */}
         <Route element={<LandingLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/product" element={<ProductPage />} />
-          <Route path="/pricing" element={<PrisingPage />} />
-          <Route path="/support" element={<SupportPage />} />
-          <Route path="/equity" element={<Equity />} />
-          <Route path="/currency" element={<Currency />} />
-          <Route path="/commodity" element={<Commodity />} />
-          <Route path="/admindashboard" element={<AdminDashboard />} />
+          <Route path="/Signup" element={<SignUp />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/About" element={<AboutPage />} />
+          <Route path="/Product" element={<ProductPage />} />
+          <Route path="/Pricing" element={<PrisingPage />} />
+          <Route path="/Support" element={<SupportPage />} />
+          <Route path="/Equity" element={<Equity />} />
+          <Route path="/Currency" element={<Currency />} />
+          <Route path="/Commodity" element={<Commodity />} />
+          <Route path="/AdminDashboard" element={<AdminDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 
         {/* Dashboard Pages */}
-        <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route path="/Dashboard" element={<DashboardLayout />}>
           <Route index element={<Navigate to="summary" replace />} />
-          <Route path="summary" element={<Summary />} />
-          <Route path="orders" element={<Orders />} />
-          <Route path="holdings" element={<Holdings />} />
-          <Route path="positions" element={<Positions />} />
-          <Route path="funds" element={<Funds />} />
-          <Route path="apps" element={<Apps />} />
+          <Route path="Summary" element={<Summary />} />
+          <Route path="Orders" element={<Orders />} />
+          <Route path="Holdings" element={<Holdings />} />
+          <Route path="Positions" element={<Positions />} />
+          <Route path="Funds" element={<Funds />} />
+          <Route path="Apps" element={<Apps />} />
         </Route>
       </Routes>
     </Suspense>

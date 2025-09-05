@@ -6,7 +6,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const res = await axios.get("http://localhost:3002/allSupport");
+        const res = await axios.get("https://tradenest-orec.onrender.com/allSupport");
         setComplaints(res.data); // Assuming res.data is an array of support objects
       } catch (err) {
         console.error("Error fetching support data:", err);

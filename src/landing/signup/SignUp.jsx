@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import AOS from "aos";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "aos/dist/aos.css";
 
-function Login() {
+function Signup() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState(""); // <-- optional field
   const [password, setPassword] = useState("");
@@ -24,7 +24,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3002/Login",
+        "https://tradenest-orec.onrender.com/Login",
         { email, password, name }, // send name also (optional)
         {
           withCredentials: true,
@@ -197,4 +197,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

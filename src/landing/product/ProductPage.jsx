@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from './hero.jsx'
+import Hero from './Hero.jsx'
 import RightSection from './RightSection.jsx'
 import AnimatedCard from './AnimatedCard.jsx'
 function ProductPage() {

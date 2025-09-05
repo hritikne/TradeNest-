@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link, useNavigate } from 'react-router-dom';
@@ -6,7 +6,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Signup() {
+function Login() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
@@ -28,7 +28,7 @@ function Signup() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:3002/Signup', formData, {
+      const res = await axios.post('https://tradenest-orec.onrender.com/Signup', formData, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" }
       });
@@ -193,4 +193,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;
